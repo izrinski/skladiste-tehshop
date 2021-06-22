@@ -1,6 +1,6 @@
 <mat-card class="item" *ngIf="laptop" (click)="edit.emit(laptop)">
     <h3>Naziv: {{ laptop.naziv }}</h3>
-    <p>id: {{ laptop.id3 }}</p>
-    <p>cijena: {{ laptop.cijena }} kn</p>
-    <p>BROJ GOLOVA: {{ laptop.naLageru }}</p>
+    <p>ID: {{ laptop.id }}</p>
+    <p>Cijena: {{ laptop.cijena }} kn</p>
+    <p>Na skladištu: {{ laptop.naLageru }} komada</p>
   </mat-card>

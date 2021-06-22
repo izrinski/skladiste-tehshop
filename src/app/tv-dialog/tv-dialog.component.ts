@@ -16,7 +16,6 @@ export class TvDialogComponent {
   ) { }
 
   cancel(): void {
-    this.data.tv.id2 = this.backupTv.id2;
     this.data.tv.naziv = this.backupTv.naziv;
     this.data.tv.cijena = this.backupTv.cijena;
     this.data.tv.naLageru = this.backupTv.naLageru;

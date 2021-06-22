@@ -13,7 +13,7 @@
       <button mat-button (click)="noviMobitel()">
         <mat-icon>add</mat-icon> Dodaj mobitel</button><br><br>
 
-      <button mat-button (click)="sort('id1')">  Sort<i class="fa fa-sort"></i></button><br><br>
+      <button mat-button (click)="sort('naziv')">  Sort<i class="fa fa-sort"></i></button><br><br>
       <mat-card class="list" id="mobiteli">
         <p class="empty-label" *ngIf="(mobiteli | async)?.length === 0">
           Nema proizvoda
@@ -32,7 +32,7 @@
       <button (click)="noviTv()" mat-button>
         <mat-icon>add</mat-icon> Dodaj televizor</button><br><br>
 
-      <button mat-button (click)="sort2('id2')">  Sort<i class="fa fa-sort"></i></button><br><br>
+      <button mat-button (click)="sort2('naziv')">  Sort<i class="fa fa-sort"></i></button><br><br>
       <mat-card id="tvi" class="list">
         <p class="empty-label" *ngIf="(tvi | async)?.length === 0">
           Nema proizvoda
@@ -52,7 +52,7 @@
         <mat-icon>add</mat-icon> Dodaj laptop
       </button><br><br>
       
-      <button mat-button (click)="sort3('id3')">  Sort<i class="fa fa-sort"></i></button><br><br>
+      <button mat-button (click)="sort3('naziv')">  Sort<i class="fa fa-sort"></i></button><br><br>
     
       <mat-card id="laptopi" class="list">
 

@@ -19,6 +19,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { Ng2OrderModule } from 'ng2-order-pipe';
+import { MobitelNalogComponent } from './mobitel-nalog/mobitel-nalog.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
     LaptopComponent,
     LaptopDialogComponent,
     TvComponent,
-    TvDialogComponent
+    TvDialogComponent,
+    MobitelNalogComponent
   ],
   imports: [
     BrowserModule,

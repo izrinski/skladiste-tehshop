@@ -3,33 +3,33 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Mobitel } from '../mobitel/mobitel';
 
 @Component({
-  selector: 'app-mobitel-dialog',
-  templateUrl: './mobitel-dialog.component.html',
-  styleUrls: ['./mobitel-dialog.component.css']
+  selector: 'app-mobitel-nalog',
+  templateUrl: './mobitel-nalog.component.html',
+  styleUrls: ['./mobitel-nalog.component.css']
 })
-export class MobitelDialogComponent {
+export class MobitelNalogComponent {
   private backupMobitel: Partial<Mobitel> = { ...this.data.mobitel };
 
   constructor(
-    public dialogRef: MatDialogRef<MobitelDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: MobitelDialogData
+    public dialogRef: MatDialogRef<MobitelNalogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: MobitelNalogData
   ) { }
 
   cancel(): void {
-    this.data.mobitel.naziv = this.backupMobitel.naziv;
     this.data.mobitel.cijena = this.backupMobitel.cijena;
-    this.data.mobitel.naLageru = this.backupMobitel.naLageru;
+    this.data.mobitel.isporuka = this.backupMobitel.isporuka;
+    this.data.mobitel.nadopuna = this.backupMobitel.nadopuna;
     this.dialogRef.close(this.data);
   }
 
 }
 
-export interface MobitelDialogData {
+export interface MobitelNalogData {
   mobitel: Partial<Mobitel>;
   enableDelete: boolean;
 }
 
-export interface MobitelDialogResult {
+export interface MobitelNalogResult {
   mobitel: Mobitel;
   delete?: boolean;
 }

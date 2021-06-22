@@ -4,6 +4,7 @@ import { Tv } from './tv/tv';
 import { Laptop } from './laptop/laptop';
 import { MatDialog } from '@angular/material/dialog';
 import { MobitelDialogComponent,MobitelDialogResult } from './mobitel-dialog/mobitel-dialog.component';
+import { MobitelNalogComponent,MobitelNalogResult } from './mobitel-nalog/mobitel-nalog.component';
 import { AngularFirestore,AngularFirestoreCollection } from '@angular/fire/firestore';
 import { TvDialogComponent,TvDialogResult } from './tv-dialog/tv-dialog.component';
 import { LaptopDialogComponent, LaptopDialogResult} from './laptop-dialog/laptop-dialog.component';
@@ -37,14 +38,14 @@ export class AppComponent {
 
 
   editMobitel(list: 'mobiteli', mobitel: Mobitel): void {
-    const dialogRef = this.dialog.open(MobitelDialogComponent, {
+    const dialogRef = this.dialog.open(MobitelNalogComponent, {
       width: '270px',
       data: {
         mobitel,
         enableDelete: true,
       },
     });
-    dialogRef.afterClosed().subscribe((result: MobitelDialogResult) => {
+    dialogRef.afterClosed().subscribe((result: MobitelNalogResult) => {
       if (result.delete) {
         this.store.collection(list).doc(mobitel.id).delete();
       } else {

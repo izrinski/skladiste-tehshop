@@ -16,7 +16,6 @@ export class LaptopDialogComponent {
   ) { }
 
   cancel(): void {
-    this.data.laptop.id3 = this.backupLaptop.id3;
     this.data.laptop.naziv = this.backupLaptop.naziv;
     this.data.laptop.cijena = this.backupLaptop.cijena;
     this.data.laptop.naLageru = this.backupLaptop.naLageru;

@@ -1,14 +1,17 @@
 <mat-form-field>
-  <mat-label>Isporuka</mat-label>
-  <textarea matInput [(ngModel)]="data.mobitel.isporuka"></textarea>
+  <mat-label>Naziv</mat-label>
+  <input matInput cdkFocusInitial [(ngModel)]="data.mobitel.naziv" />
 </mat-form-field>
-  
-  <mat-form-field>
-    <mat-label>Cijena</mat-label>
-    <textarea matInput [(ngModel)]="data.mobitel.cijena"></textarea>
-  </mat-form-field>
 
-  
+<mat-form-field>
+  <mat-label>Cijena</mat-label>
+  <textarea matInput [(ngModel)]="data.mobitel.cijena"></textarea>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Na skladištu</mat-label>
+  <textarea matInput [(ngModel)]="data.mobitel.naLageru"></textarea>
+</mat-form-field>
   
     
     <div mat-dialog-actions>
