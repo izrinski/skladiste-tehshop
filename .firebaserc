@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "skladiste-tehshop": {
+      "hosting": {
+        "skl": [
+          "skladiste-tehshop"
+        ]
+      }
+    }
+  }
+}

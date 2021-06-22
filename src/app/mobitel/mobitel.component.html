@@ -1,0 +1,6 @@
+<mat-card class="item" *ngIf="mobitel" (click)="edit.emit(mobitel)">
+    <h3>Naziv: {{ mobitel.naziv }}</h3>
+    <p>id: {{ mobitel.id1 }}</p>
+    <p>cijena: {{ mobitel.cijena }} kn</p>
+    <p>Na lageru: {{ mobitel.naLageru }}</p>
+  </mat-card>

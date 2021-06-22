@@ -1,0 +1,33 @@
+<mat-form-field>
+    <mat-label>ID</mat-label>
+    <input matInput cdkFocusInitial [(ngModel)]="data.tv.id2" />
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Naziv</mat-label>
+    <input matInput cdkFocusInitial [(ngModel)]="data.tv.naziv" />
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Cijena</mat-label>
+    <textarea matInput [(ngModel)]="data.tv.cijena"></textarea>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Na lageru</mat-label>
+    <textarea matInput [(ngModel)]="data.tv.naLageru"></textarea>
+  </mat-form-field>
+  
+    
+    <div mat-dialog-actions>
+      <button mat-button [mat-dialog-close]="{ tv: data.tv }">OK</button>
+      <button mat-button (click)="cancel()">Cancel</button>
+      <button 
+        *ngIf="data.enableDelete"
+        mat-fab
+        color="primary"
+        aria-label="Delete"
+        [mat-dialog-close]="{ tv: data.tv, delete: true }">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
