@@ -14,6 +14,8 @@ Ovaj sustav ne zamjenjuje već postojeće aplikacije koje su skladištima dostup
 
 ## Instalacija aplikacije
 
+##### Potrebno je instalirati Node.js (ako već nije instaliran u sustavu); potrebno ga je preuzeti sa stranice https://nodejs.org/en/ i lokalno instalirati
+
 #### 1. korak
 ```
 npm install -g @angular/cli
