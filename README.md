@@ -1,27 +1,33 @@
-# Skl
+# Skladiste
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
+Aplikacija je zamišljena kao web aplikacija koja služi osobama koji se bave evidencijom skladišta lakše evidentiranje proizvoda na skladištu. Sustav je rađen za određeni dućan koji sadrži  tehničke i informatičke proizvode poput mobitela, TV-a i laptopa. 
 
-## Development server
+Aplikacija omogućava unos novih proizvoda (mobitela, televizora i laptopa), te se ti proizvodi prikazuju u tablicama sa svojim atributima. 
+Nakon što su dodani proizvodi, na listi proizvoda je moguće dodavanje i isporuka proizvoda sa skladišta. Ujedno, moguće je i promijeniti cijenu proizvoda. 
+U listi proizvoda ostaje broj koji korisniku govori koliko je određenih proizvoda ostalo na skladištu, ili ih više nema pa je potrebno naručiti određeni proizvod. 
+Omogućeno je sortiranje, čime korisnik ima lakši prikaz proizvoda u tablicama/listama.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Naručitelj ove aplikacije je dućan tehničkih proizvoda koji posjeduje skladište s proizvodima koje je potrebno voditi raditi olakšanog evidentiranja proizvoda koji dolaze ili odlaze iz skladišta. 
+Aplikacija je zamišljena da bude jednostavna za korištenje, tako da zaposlenik u skladištu, onaj koji će biti zadužen za evidenciju proizvoda, lakše koristi aplikaciju. 
+Ovaj sustav ne zamjenjuje već postojeće aplikacije koje su skladištima dostupne diljem svijeta, ali omogućuju jednostavno korištenje aplikacije za manja skladišta.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalacija aplikacije
 
-## Build
+#### 1. korak
+```
+npm install -g @angular/cli
+```
+#### 2. korak
+```
+ng add angular/material
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Pokrenuti kod
+```
+ng serve
+```
+### Otvaranje aplikacije u pregledniku
+```
+http://localhost:4200/ 
+```

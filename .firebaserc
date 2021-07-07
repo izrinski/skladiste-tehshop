@@ -7,5 +7,9 @@
         ]
       }
     }
+  },
+  "projects": {
+    "hosting": "skladiste-tehshop",
+    "default": "skladiste-tehshop"
   }
 }

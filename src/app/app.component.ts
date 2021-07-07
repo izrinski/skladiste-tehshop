@@ -7,8 +7,11 @@ import { MobitelDialogComponent,MobitelDialogResult } from './mobitel-dialog/mob
 import { MobitelNalogComponent,MobitelNalogResult } from './mobitel-nalog/mobitel-nalog.component';
 import { AngularFirestore,AngularFirestoreCollection } from '@angular/fire/firestore';
 import { TvDialogComponent,TvDialogResult } from './tv-dialog/tv-dialog.component';
+import { TvNalogComponent,TvNalogResult } from './tv-nalog/tv-nalog.component';
 import { LaptopDialogComponent, LaptopDialogResult} from './laptop-dialog/laptop-dialog.component';
+import { LaptopNalogComponent,LaptopNalogResult } from './laptop-nalog/laptop-nalog.component';
 import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -45,44 +48,79 @@ export class AppComponent {
         enableDelete: true,
       },
     });
+
+    mobitel.isporuka = 0;
+    mobitel.nadopuna = 0;
     dialogRef.afterClosed().subscribe((result: MobitelNalogResult) => {
+      result.mobitel.naLageru =
+        result.mobitel.naLageru - result.mobitel.isporuka;
+      result.mobitel.naLageru =
+        Number(result.mobitel.naLageru) + Number(result.mobitel.nadopuna);
       if (result.delete) {
         this.store.collection(list).doc(mobitel.id).delete();
-      } else {
+      }
+      if (result.mobitel.naLageru < 0) {
+        mobitel.naLageru = Number(mobitel.naLageru) + Number(mobitel.isporuka);
+        mobitel.isporuka = 0;
+        alert('Nema na zalihi');
+      } else if (result.mobitel.naLageru >= 0) {
+        (mobitel.isporuka = 0), (mobitel.nadopuna = 0);
+
         this.store.collection(list).doc(mobitel.id).update(mobitel);
       }
     });
   }
 
   editTv(list: 'tvi', tv: Tv): void {
-    const dialogRef = this.dialog.open(TvDialogComponent, {
+    const dialogRef = this.dialog.open(TvNalogComponent, {
       width: '270px',
       data: {
         tv,
         enableDelete: true,
       },
     });
-    dialogRef.afterClosed().subscribe((result: TvDialogResult) => {
+    tv.isporuka = 0;
+    tv.nadopuna = 0;
+    dialogRef.afterClosed().subscribe((result: TvNalogResult) => {
+      result.tv.naLageru =
+        result.tv.naLageru - result.tv.isporuka;
+      result.tv.naLageru =
+        Number(result.tv.naLageru) + Number(result.tv.nadopuna);
       if (result.delete) {
         this.store.collection(list).doc(tv.id).delete();
-      } else {
+      }
+      if (result.tv.naLageru < 0) {
+        tv.naLageru = Number(tv.naLageru) + Number(tv.isporuka);
+        tv.isporuka = 0;
+        alert('Nema na zalihi');
+      } else if (result.tv.naLageru >= 0) {
+        (tv.isporuka = 0), (tv.nadopuna = 0);
+
         this.store.collection(list).doc(tv.id).update(tv);
       }
     });
   }
 
   editLaptop(list: 'laptopi', laptop: Laptop): void {
-    const dialogRef = this.dialog.open(LaptopDialogComponent, {
-      width: '270px',
-      data: {
-        laptop,
-        enableDelete: true,
-      },
-    });
-    dialogRef.afterClosed().subscribe((result: LaptopDialogResult) => {
+    const dialogRef = this.dialog.open(LaptopNalogComponent, { width: '270px', data: { laptop, enableDelete: true,},}
+    );
+    laptop.isporuka = 0;
+    laptop.nadopuna = 0;
+    dialogRef.afterClosed().subscribe((result: LaptopNalogResult) => {
+      result.laptop.naLageru =
+        result.laptop.naLageru - result.laptop.isporuka;
+      result.laptop.naLageru =
+        Number(result.laptop.naLageru) + Number(result.laptop.nadopuna);
       if (result.delete) {
         this.store.collection(list).doc(laptop.id).delete();
-      } else {
+      }
+      if (result.laptop.naLageru < 0) {
+        laptop.naLageru = Number(laptop.naLageru) + Number(laptop.isporuka);
+        laptop.isporuka = 0;
+        alert('Nema na zalihi');
+      } else if (result.laptop.naLageru >= 0) {
+        (laptop.isporuka = 0), (laptop.nadopuna = 0);
+
         this.store.collection(list).doc(laptop.id).update(laptop);
       }
     });

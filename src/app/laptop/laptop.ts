@@ -3,4 +3,6 @@ export interface Laptop {
     naziv: string;
     cijena: number;
     naLageru: number;
+    isporuka: number;
+    nadopuna: number;
 }
