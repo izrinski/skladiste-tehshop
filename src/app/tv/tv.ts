@@ -5,4 +5,5 @@ export interface Tv {
     naLageru: number;
     isporuka: number;
     nadopuna: number;
+    zadnjaIzmjena: Date;
 }

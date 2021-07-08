@@ -20,6 +20,7 @@ export class LaptopNalogComponent  {
     this.data.laptop.cijena = this.backupLaptop.cijena;
     this.data.laptop.isporuka = this.backupLaptop.isporuka;
     this.data.laptop.nadopuna = this.backupLaptop.nadopuna;
+    this.data.laptop.zadnjaIzmjena = this.backupLaptop.zadnjaIzmjena;
     this.dialogRef.close(this.data);
   }
 

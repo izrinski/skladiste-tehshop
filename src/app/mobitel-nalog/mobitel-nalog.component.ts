@@ -19,6 +19,7 @@ export class MobitelNalogComponent {
     this.data.mobitel.cijena = this.backupMobitel.cijena;
     this.data.mobitel.isporuka = this.backupMobitel.isporuka;
     this.data.mobitel.nadopuna = this.backupMobitel.nadopuna;
+    this.data.mobitel.zadnjaIzmjena = this.backupMobitel.zadnjaIzmjena;
     this.dialogRef.close(this.data);
   }
 

@@ -5,4 +5,5 @@ export interface Mobitel {
     naLageru: number;
     isporuka: number;
     nadopuna: number;
+    zadnjaIzmjena: Date;
 }

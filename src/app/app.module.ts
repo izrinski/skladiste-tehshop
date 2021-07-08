@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
 import { MobitelDialogComponent } from './mobitel-dialog/mobitel-dialog.component';
 import { TvComponent } from './tv/tv.component';
@@ -22,6 +23,7 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
 import { MobitelNalogComponent } from './mobitel-nalog/mobitel-nalog.component';
 import { LaptopNalogComponent } from './laptop-nalog/laptop-nalog.component';
 import { TvNalogComponent } from './tv-nalog/tv-nalog.component';
+
 
 
 @NgModule({
@@ -46,6 +48,7 @@ import { TvNalogComponent } from './tv-nalog/tv-nalog.component';
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
+    MatDatepickerModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,

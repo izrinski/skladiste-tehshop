@@ -19,6 +19,7 @@ export class LaptopDialogComponent {
     this.data.laptop.naziv = this.backupLaptop.naziv;
     this.data.laptop.cijena = this.backupLaptop.cijena;
     this.data.laptop.naLageru = this.backupLaptop.naLageru;
+    this.data.laptop.zadnjaIzmjena = this.backupLaptop.zadnjaIzmjena;
     this.dialogRef.close(this.data);
   }
 

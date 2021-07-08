@@ -19,6 +19,7 @@ export class TvDialogComponent {
     this.data.tv.naziv = this.backupTv.naziv;
     this.data.tv.cijena = this.backupTv.cijena;
     this.data.tv.naLageru = this.backupTv.naLageru;
+    this.data.tv.zadnjaIzmjena = this.backupTv.zadnjaIzmjena;
     this.dialogRef.close(this.data);
   }
 
